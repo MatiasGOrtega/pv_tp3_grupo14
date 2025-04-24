@@ -1,52 +1,80 @@
-# Trabajo Práctico - [Nombre de la Materia]
+# Trabajo Práctico N°3 - Grupo 14
 
-Este repositorio contiene el desarrollo del trabajo práctico asignado por los profesores de la cátedra. El objetivo es organizar el trabajo colaborativo entre los integrantes del grupo de manera estructurada, utilizando ramas específicas para cada consigna o ejercicio.
+Aplicación de Lista de Tareas en React
+
+## 🎯 Objetivo
+
+Este trabajo práctico tiene como finalidad introducir a los estudiantes en el desarrollo de aplicaciones web utilizando **React**, abordando conceptos clave como:
+
+- JSX
+- Componentes funcionales
+- Props
+- Estado (`useState`)
+- Hooks
+
+## 📝 Descripción del Proyecto
+
+El proyecto consiste en desarrollar una **aplicación de lista de tareas** orientada a organizar y gestionar las actividades necesarias para llevar a cabo el propio trabajo práctico.
+
+## 🛠️ Funcionalidades esperadas
+
+La aplicación debe permitir al usuario:
+
+- ✅ Agregar nuevas tareas.
+- 📄 Visualizar la lista de tareas.
+- ✔️ Marcar tareas como completadas.
+- ❌ Eliminar tareas de la lista.
+
+## 🚀 Configuración del Proyecto
+
+1. Clonar este repositorio:
+
+   ```bash
+   git clone https://github.com/MatiasGOrtega/pv_tp3_grupo14.git
+   ```
+
+2. Navegar a directorio del proyecto:
+
+   ```bash
+   cd pv_tp3_grupo14
+   ```
+
+3. Instalar las dependencias necesarias:
+
+   ```bash
+   npm install
+   ```
+
+4. Ejercutar el proyecto:
+
+   ```bash
+   npm run dev
+   ```
 
 ## 💡 Estructura de trabajo
 
-Cada consigna o ejercicio se desarrollará en una **rama individual**. Cada integrante del grupo será responsable de una rama específica. Esto permitirá trabajar en paralelo, revisar los avances de forma independiente y fusionarlos a la rama principal (`main`) una vez finalizados y revisados.
-
-## 🌱 Nomenclatura de ramas
-
-Las ramas deben nombrarse siguiendo este formato:
-### Ejemplos:
-
-- `consigna-1`
-- `consigna-2`
-- `consigna-3`
-
-> ✅ Usar solo letras minúsculas y guiones para separar palabras.
+Cada funcionalidad a implementar se desarrollará en una **rama individual**. Cada integrante del grupo será responsable de una rama específica. Esto permitirá trabajar en paralelo, revisar los avances de forma independiente y fusionarlos a la rama principal (`main`) una vez finalizados y revisados.
 
 ## 🧑‍💻 Flujo de trabajo
 
-1. **Crear una rama** a partir de `main`:
-   ```bash
-   git checkout main
-   git pull origin main
-   git checkout -b consigna-[número]
+1. Clona este repositorio.
+2. Crea una nueva rama para tus cambios (`git checkout -b feature/new-feature`).
+3. Realiza tus modificaciones.
+4. Escribe mensajes de confirmación siguiendo el [Commits convencionales](https://www.conventionalcommits.org/en/v1.0.0/) estandar:
+   - **feat**: Una nueva característica.
+   - **fix**: Una corrección de errores.
+   - **style**: Cambios que no afectan el significado del código (espacios en blanco, formato, etc.)
+   - **refactor**: Cambio de código que no corrige un error ni agrega una característica.
+5. Haz un push de tus cambios (`git push origin feature/new-feature`).
+6. Abra una solicitud de extracción para que se revisen sus cambios.
+7. Cuando el PR sea aprobado, se podrá fusionar a main.
 
-2. **Desarrollar la consigna asignada en tu rama.** Realizá commits frecuentes y descriptivos.
+## 👥 Integrantes
 
-3. **Sincronizar periódicamente** con la rama main para evitar conflictos:
-    ```bash
-    git checkout main
-    git pull origin main
-    git checkout consigna-[número]
-    git merge main
-
-4. Una vez finalizada tu parte:
-* Asegurate de que el código esté limpio y funcione correctamente.
-* Crear un Pull Request (PR) para fusionar tu rama con main.
-* Solicitar revisión a tus compañeros.
-
-5. Cuando el PR sea aprobado, se podrá fusionar a main.
-
-## 👥 Integrantes y consignas asignadas
-
-| Nombre completo             | Usuario GitHub       | Consigna/sasignadas    | 
-|-----------------------------|----------------------|------------------------|
-| Matias Gabriel Ortega       | `@MatiasGOrtega`     | Consigna 1 - 2 - 3 - 4 | 
-| Salim Farid Quintar         | `@safaqui00`         | Consigna 1 - 2 - 3 - 4 |
-| Lucas Enrique Cari          | `@CariLucky`         | Consigna 1 - 2 - 3 - 4 |
-| Rodrigo Alexis Guanactolay  | `@GuanactolayRodrigo`| Consigna 1 - 2 - 3 - 4 | 
-| Balcazar Victor Fernando    | `@vfbalcazar08`      | Consigna 1 - 2 - 3 - 4 |
+| Nombre completo            | Usuario GitHub        |
+| -------------------------- | --------------------- |
+| Matias Gabriel Ortega      | `@MatiasGOrtega`      |
+| Salim Farid Quintar        | `@safaqui00`          |
+| Lucas Enrique Cari         | `@CariLucky`          |
+| Rodrigo Alexis Guanactolay | `@GuanactolayRodrigo` |
+| Balcazar Victor Fernando   | `@vfbalcazar08`       |
