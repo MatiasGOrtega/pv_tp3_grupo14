@@ -13,7 +13,9 @@ function App() {
   // TAREA GRUPAL: Implementar estas funciones
   
   // Añadir nueva tarea
-  const addTask = (text) => {};
+  const addTask = (text) => {
+    setTasks([...tasks, { id: Date.now(), text, completed: false }]);
+  };
 
   // Cambiar estado de completado
   const toggleTask = (id) => {};
