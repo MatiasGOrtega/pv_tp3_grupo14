@@ -1,4 +1,6 @@
 import { mostrarlista, filtrarProductos} from "./funciones.js";
+import { agregarIVA } from "./funciones.js";
+
 let productos = 
 [
     { descripcion: "Auriculares", precio: 49000 },
@@ -19,6 +21,7 @@ filtrarProductos(productos);
 
 // 3 - Crear un array con los productos, pero con el precio con IVA incluido (21%), usando 
 // map. 
+agregarIVA(productos);
 
 
 // 4 - Ordenar el array original de productos por precio de menor a mayor, usando sort. 
