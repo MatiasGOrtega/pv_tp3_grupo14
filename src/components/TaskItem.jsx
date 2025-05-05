@@ -1,14 +1,15 @@
 const TaskItem = ({ tarea, cambiarEstadoTarea, eliminarTarea }) => {
   return (
       <li>
-          <p style={{ textDecoration: tarea.completa ? "line-through" : "none" }}>
+          <span style={{ textDecoration: tarea.completa ? "line-through" : "none" }}>
               {tarea.nuevaTarea}
+              </span>
               <button className="completar" onClick={() => cambiarEstadoTarea(tarea.id)}>
               {tarea.completa ? "Desmarcar" : "Completa"}
               </button>
+              <button className="borrar" onClick={() => eliminarTarea(tarea.id)}>Borrar</button> 
 
-          </p>
-             <button className="borrar" onClick={() => eliminarTarea(tarea.id)}>Borrar</button> 
+          
       </li>
   );
 };

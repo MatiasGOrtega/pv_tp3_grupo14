@@ -1,14 +1,19 @@
+import { useState } from "react";
 import TaskItem from "./TaskItem";
+import TaskInput from "./TaskInput";
 
-function TaskList({ tasks, onToggle, onDelete }) {
-  // TAREA: Mostrar la lista de tareas usando el componente TaskItem
-  // Pista: Usar el método map para recorrer el array tasks
-  // Cada TaskItem necesita: key, task, onToggle y onDelete
+const TaskList = ({tareas,cambiarEstadoTarea,eliminarTarea,guardarTarea})=> {
+
   return (
-    <ul className="task-list">
-      {/* Aquí va el código para mostrar las tareas */}
-    </ul>
-  );
+    <div>
+        <TaskInput guardarTarea={guardarTarea} />
+        <ul>
+            {tareas.map(t => (
+                <TaskItem key={t.id} tarea={t} cambiarEstadoTarea={cambiarEstadoTarea} eliminarTarea={eliminarTarea} />
+            ))}
+        </ul>
+    </div>
+);
 }
 
 export default TaskList;

@@ -25,10 +25,10 @@ function App() {
 
 
   return (
-    <div className="app">
-      <Header />
-      <AddTask onAdd={addTask} />
-      <TaskList tasks={tasks} onToggle={toggleTask} onDelete={deleteTask} />
+    <div className="contenedor-principal">
+      <h1>Lista de Tareas</h1>
+      <TaskList tareas={tareas} guardarTarea={guardarTarea} cambiarEstadoTarea={cambiarEstadoTarea} eliminarTarea={eliminarTarea}/>
+      
     </div>
   );
 }
