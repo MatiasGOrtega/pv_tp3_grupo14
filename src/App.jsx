@@ -13,8 +13,11 @@ function App() {
 
 
   // Cambiar estado de completado
-  const toggleTask = (id) => {};
+  const cambiarEstadoTarea = (id) => {
+    setTareas(tareas.map(t => t.id === id ? { ...t, completa: !t.completa } : t));
+  };
 
+  
   // Eliminar tarea
   const deleteTask = (id) => {};
 
