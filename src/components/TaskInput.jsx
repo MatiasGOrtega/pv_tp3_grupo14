@@ -1,30 +1,22 @@
 import React from "react";
 import React, { useState } from "react";
 
-function TaskInput({ onAdd }) {
-  const [text, setText] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (text.trim()) {
-      onAdd(text);
-      setText("");
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="add-task">
-      <input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Nueva Tarea"
-      />
-      <button className="agregar" type="submit">
-        Agregar
-      </button>
-    </form>
-  );
-}
-
+  const TaskInput = ({guardarTarea}) => {
+    const [tarea, setTarea] = useState("");
+    
+    const manejarEnvio = (e) => {
+        
+        if (tarea.trim()) {
+            guardarTarea(tarea);
+            setTarea("");
+        }
+    };
+    
+        return (
+            <div className="formulario-tarea">
+                <input type="text" value={tarea} onChange={(e) => setTarea(e.target.value)} placeholder="Nueva Tarea" />
+                <button className="agregar" onClick={manejarEnvio}>Agregar</button>
+            </div>
+        );
+    };
 export default TaskInput;

@@ -5,17 +5,12 @@ import TaskList from "./components/TaskList";
 import AddTask from "./components/TaskInput";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    { id: 1, text: "Crear repositorio en github", completed: false },
-    { id: 2, text: "Agregar colaboradores", completed: false },
-    { id: 3, text: "Iniciar el proyecto", completed: false },
-  ]);
-  // TAREA GRUPAL: Implementar estas funciones
-  
-  // Añadir nueva tarea
-  const addTask = (text) => {
-    setTasks([...tasks, { id: Date.now(), text, completed: false }]);
+  const [tareas, setTareas] = useState([]);
+
+  const guardarTarea = (nuevaTarea) => {
+      setTareas([...tareas, { id: Date.now(), nuevaTarea, completa: false }]);
   };
+
 
   // Cambiar estado de completado
   const toggleTask = (id) => {};
