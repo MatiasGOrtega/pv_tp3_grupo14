@@ -1,96 +1,108 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f5f5f5;
-}
-
-.app {
+/* Contenedor principal */
+.contenedor-principal {
   max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
+  margin: 50px auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
-header h1 {
-  color: #333;
-  margin-bottom: 5px;
-}
 
-header p {
-  color: #666;
-  margin-top: 0;
-}
-
-.add-task {
+/* Estilo global */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #333;
   margin-bottom: 20px;
 }
 
-.add-task input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.add-task button {
-  padding: 10px 15px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.task-list {
+/* Lista de tareas */
+ul {
   list-style: none;
   padding: 0;
 }
 
-.task-item {
+li {
+  margin-bottom: 15px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+  color: #02060b;
+
 }
 
-.task-item.completed .task-text {
-  text-decoration: line-through;
-  color: #888;
-}
 
-.task-text {
-  cursor: pointer;
+
+/* Input */
+.formulario-tarea input[type="text"] {
   flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
 
-.task-controls {
+.formulario-tarea {
   display: flex;
   align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.task-status {
-  margin-right: 10px;
+/* Botones */
+button {
+  padding: 8px 12px;
   font-size: 14px;
-  color: #666;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
-.delete-btn {
-  background-color: #f44336;
+/* Botón Agregar (verde) */
+.agregar {
+  background-color: #28a745;
   color: white;
   border: none;
-  border-radius: 4px;
-  padding: 5px 10px;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
+}
+.agregar:hover {
+  background-color: #218838;
+}
+
+/* Botón Completar (azul) */
+.completar {
+  background-color: #007bff;
+  color: white;
+}
+
+.completar:hover {
+  background-color: #0056b3;
+}
+
+/* Botón Borrar (rojo) */
+.borrar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.borrar:hover {
+  background-color: #a71d2a;
 }
