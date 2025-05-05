@@ -1,6 +1,7 @@
 import { mostrarlista, filtrarProductos} from "./funciones.js";
 import { agregarIVA } from "./funciones.js";
 import { ordenarProductos } from "./funciones.js";
+import { agregarProducto } from "./funciones.js";
 let productos = 
 [
     { descripcion: "Auriculares", precio: 49000 },
@@ -29,6 +30,6 @@ ordenarProductos(productos);
 
 // 5 - Agregar un nuevo producto al final del array (por ejemplo, { descripcion: "Parlante 
 // Bluetooth", precio: 59000.90 }). 
-
+agregarProducto(productos);
 
 // 6 - Eliminar el producto con el precio más bajo del array. Mostrar cómo queda el array. 

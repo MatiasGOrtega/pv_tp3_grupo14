@@ -24,4 +24,10 @@ export const ordenarProductos = (productos) =>{
   console.log("\n4 - Productos ordenados por precio (menor a mayor):");
   console.log(productos);
 }
+export const agregarProducto = (producots) =>{
+  productos.push({ descripcion: "Parlante Bluetooth", precio: 59000.90 });
+  console.log("\n5 - Producto agregado:");
+  console.log(productos);
+}
+
 
