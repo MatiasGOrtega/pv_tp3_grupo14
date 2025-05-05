@@ -8,7 +8,7 @@ const TaskItem = ({ tarea, cambiarEstadoTarea, eliminarTarea }) => {
               </button>
 
           </p>
-          
+             <button className="borrar" onClick={() => eliminarTarea(tarea.id)}>Borrar</button> 
       </li>
   );
 };
