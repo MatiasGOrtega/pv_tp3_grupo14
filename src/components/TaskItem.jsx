@@ -1,29 +1,16 @@
-import React from "react";
-
-function TaskItem({ task, onToggle, onDelete }) {
-  // TAREA: Mostrar cada tarea con:
-  // - El texto de la tarea (task.text)
-  // - Un botón para eliminar (onDelete)
-  // - La capacidad de marcar como completada (onToggle)
-  // - Mostrar "Realizada" o "Pendiente" según task.completed
-
+const TaskItem = ({ tarea, cambiarEstadoTarea, eliminarTarea }) => {
   return (
-    <li className={`task-item ${task.completed ? "completed" : ""}`}>
-      {/* Texto de la tarea (hacer clickable para toggle) */}
-      {/* agregarle la clase task-text para aplicar estilos*/}
+      <li>
+          <p style={{ textDecoration: tarea.completa ? "line-through" : "none" }}>
+              {tarea.nuevaTarea}
+              <button className="completar" onClick={() => cambiarEstadoTarea(tarea.id)}>
+              {tarea.completa ? "Desmarcar" : "Completa"}
+              </button>
 
-
-      <div className="task-controls">
-        {/* Mostrar el estado de la tarea */}
-        {/* agregarle la clase task-status para aplicar estilos*/}
-
-
-        {/* Añadir botón para eliminar */}
-        {/* agregarle la clase delete-btn para aplicar estilos*/}
-
-      </div>
-    </li>
+          </p>
+          
+      </li>
   );
-}
+};
 
 export default TaskItem;
