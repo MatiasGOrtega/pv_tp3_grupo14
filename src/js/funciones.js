@@ -1,5 +1,5 @@
-export const  mostrarlista =(productos)=>{
-    console.log("1 - Lista de productos:");
+export const mostrarlista = (productos) => {
+  console.log("1 - Lista de productos:");
   productos.forEach(producto => {
     console.log(`Producto: ${producto.descripcion} - Precio: $${producto.precio}`);
   });
@@ -8,26 +8,32 @@ export const  mostrarlista =(productos)=>{
 
 export const filtrarProductos = (productos) => {
   const productosMayoresA20k = productos.filter(producto => producto.precio > 20000);
-    console.log("\n2 - Productos con precio mayor a $20.000:");
-    console.log(productosMayoresA20k);
+  console.log("\n2 - Productos con precio mayor a $20.000:");
+  console.log(productosMayoresA20k);
 }
 
 export const agregarIVA = (productos) => {
   const productosConIVA = productos.map(prod => ({
-      descripcion: prod.descripcion,
-      precio: (prod.precio*1.21)
+    descripcion: prod.descripcion,
+    precio: (prod.precio * 1.21)
   }));
   console.log(productosConIVA);
 }
-export const ordenarProductos = (productos) =>{
+export const ordenarProductos = (productos) => {
   productos.sort((a, b) => a.precio - b.precio);
   console.log("\n4 - Productos ordenados por precio (menor a mayor):");
   console.log(productos);
 }
-export const agregarProducto = (producots) =>{
+export const agregarProducto = (productos) => {
   productos.push({ descripcion: "Parlante Bluetooth", precio: 59000.90 });
   console.log("\n5 - Producto agregado:");
   console.log(productos);
 }
 
-
+export const eliminarProducto = (productos) => {
+  const productoEliminado = productos.shift();
+  console.log("\n6 - Producto con precio más bajo eliminado:");
+  console.log(`Eliminado: ${productoEliminado.descripcion} - $${productoEliminado.precio}`);
+  console.log("Array final de productos:");
+  console.log(productos);
+}
