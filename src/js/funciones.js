@@ -12,4 +12,10 @@ export const filtrarProductos = (productos) => {
     console.log(productosMayoresA20k);
 }
 
-
+export const agregarIVA = (productos) => {
+  const productosConIVA = productos.map(prod => ({
+      descripcion: prod.descripcion,
+      precio: (prod.precio*1.21)
+  }));
+  console.log(productosConIVA);
+}
