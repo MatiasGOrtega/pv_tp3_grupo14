@@ -1,16 +1,13 @@
-import { mostrarlista, filtrarProductos} from "./funciones.js";
-import { agregarIVA } from "./funciones.js";
-import { ordenarProductos } from "./funciones.js";
-import { agregarProducto } from "./funciones.js";
-let productos = 
-[
+import { mostrarlista, filtrarProductos, eliminarProducto, agregarIVA, ordenarProductos, agregarProducto } from "./funciones.js";
+let productos =
+  [
     { descripcion: "Auriculares", precio: 49000 },
     { descripcion: "Teclado", precio: 30000 },
     { descripcion: "Mouse", precio: 15000 },
     { descripcion: "Monitor", precio: 120000 },
     { descripcion: "Webcam", precio: 22000 }
   ];
-  
+
 
 // 1 - Mostrar en consola cada producto en el formato: "Producto: [descripción] - Precio: 
 // $[precio]", usando forEach. 
@@ -33,3 +30,4 @@ ordenarProductos(productos);
 agregarProducto(productos);
 
 // 6 - Eliminar el producto con el precio más bajo del array. Mostrar cómo queda el array. 
+eliminarProducto(productos);
