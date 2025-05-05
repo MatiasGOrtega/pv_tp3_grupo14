@@ -19,3 +19,9 @@ export const agregarIVA = (productos) => {
   }));
   console.log(productosConIVA);
 }
+export const ordenarProductos = (productos) =>{
+  productos.sort((a, b) => a.precio - b.precio);
+  console.log("\n4 - Productos ordenados por precio (menor a mayor):");
+  console.log(productos);
+}
+
