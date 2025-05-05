@@ -19,7 +19,10 @@ function App() {
 
   
   // Eliminar tarea
-  const deleteTask = (id) => {};
+  const eliminarTarea = (id) => {
+    setTareas(tareas.filter(t => t.id !== id));
+};
+
 
   return (
     <div className="app">
