@@ -2,13 +2,15 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
-import AddTask from "./components/TaskInput";
+
 
 function App() {
   const [tareas, setTareas] = useState([]);
+  const [ids,setids] = useState(0);
 
   const guardarTarea = (nuevaTarea) => {
-      setTareas([...tareas, { id: Date.now(), nuevaTarea, completa: false }]);
+      setids(ids + 1);
+      setTareas([...tareas, { id: ids, nuevaTarea, completa: false }]);
   };
 
 
