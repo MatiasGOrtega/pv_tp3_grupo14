@@ -1,10 +1,9 @@
-import { useState } from "react";
 import TaskItem from "./TaskItem";
 import TaskInput from "./TaskInput";
 
 const TaskList = ({tareas,cambiarEstadoTarea,eliminarTarea,guardarTarea})=> {
 
-  return (
+return (
     <div>
         <TaskInput guardarTarea={guardarTarea} />
         <ul>
