@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-  const TaskInput = ({guardarTarea}) => {
+    const TaskInput = ({guardarTarea}) => {
     const [tarea, setTarea] = useState("");
     
     const manejarEnvio = (e) => {
-        
+        e.preventDefault();
         if (tarea.trim()) {
             guardarTarea(tarea);
             setTarea("");
